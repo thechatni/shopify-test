@@ -7050,7 +7050,7 @@ hr {
 }
 
 .price-item {
-  color: var(--color-body-text);
+  color: var(--color-sale-text);
   font-weight: var(--font-weight-body--bolder);
 }
 
@@ -9201,4 +9201,6 @@ body.has-overlay::after {
 .product-form__cart-submit {
   position: relative;
   z-index: 2;
+  background-color: crimson;
+  color: white;
 }

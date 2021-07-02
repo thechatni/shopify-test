@@ -1,0 +1,40 @@
+<div id="SearchDrawer" class="search-bar drawer drawer--top">
+    <div class="search-bar__table">
+      <form action="{{ routes.search_url }}" method="get" class="search-bar__table-cell search-bar__form" role="search">
+        <div class="search-bar__table">
+          <div class="search-bar__table-cell search-bar__icon-cell">
+            <button type="submit" class="search-bar__icon-button search-bar__submit">
+              <span class="icon icon-search" aria-hidden="true"></span>
+              <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+            </button>
+          </div>
+          <div class="search-bar__table-cell">
+            <input type="search" id="SearchInput" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}" aria-label="{{ 'general.search.placeholder' | t }}" class="search-bar__input">
+          </div>
+        </div>
+      </form>
+      <div class="search-bar__table-cell text-right">
+        <button type="button" class="search-bar__icon-button search-bar__close js-drawer-close">
+          <span class="icon icon-x" aria-hidden="true"></span>
+          <span class="icon__fallback-text">{{ 'general.search.close_search' | t }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="NavDrawer" class="drawer drawer--left">
+  {% section 'sidebar-menu' %}
+  </div>
+  <div id="CartDrawer" class="drawer drawer--right drawer--has-fixed-footer">
+    <div class="drawer__header">
+      <div class="drawer__close">
+        <button type="button" class="drawer__close-button js-drawer-close">
+          <span class="icon icon-x" aria-hidden="true"></span>
+          <span class="icon__fallback-text">{{ 'cart.general.close_cart' | t }}</span>
+        </button>
+      </div>
+    </div>
+    <div class="drawer__inner">
+      <div id="CartContainer">
+      </div>
+    </div>
+  </div>

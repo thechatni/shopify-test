@@ -9644,6 +9644,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Youtube API callback
+// eslint-disable-next-line no-unused-vars
+function onYouTubeIframeAPIReady() {
+  theme.Video.loadVideos();
+}
 
 function removeImageLoadingAnimation(image) {
   // Remove loading animation
